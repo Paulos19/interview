@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 
 import { cn } from "@/lib/utils";
@@ -121,7 +121,7 @@ const Agent = ({
       await vapi.start(process.env.NEXT_PUBLIC_VAPI_WORKFLOW_ID!, {
         variableValues: {
           username: userName,
-          userid: userId,
+          userId: userId,
         },
       });
     } else {
@@ -160,7 +160,7 @@ const Agent = ({
             />
             {isSpeaking && <span className="animate-speak" />}
           </div>
-          <h3>Entrevistador IA</h3>
+          <h3>AI Interviewer</h3>
         </div>
 
         {/* User Profile Card */}
@@ -206,13 +206,13 @@ const Agent = ({
 
             <span className="relative">
               {callStatus === "INACTIVE" || callStatus === "FINISHED"
-                ? "Chamar"
+                ? "Call"
                 : ". . ."}
             </span>
           </button>
         ) : (
           <button className="btn-disconnect" onClick={() => handleDisconnect()}>
-            Fim
+            End
           </button>
         )}
       </div>
