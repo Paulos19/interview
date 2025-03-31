@@ -118,10 +118,10 @@ const Agent = ({
     setCallStatus(CallStatus.CONNECTING);
 
     if (type === "generate") {
-      await vapi.start(process.env.NEXT_PUBLIC_VAPI_WORKFLOW_ID!, {
+      await vapi.start(process.env.NEXT_PUBLIC_VAPI_WORKFLOW_ID as string, {
         variableValues: {
           username: userName,
-          userId: userId,
+          userid: userId,
         },
       });
     } else {
@@ -160,7 +160,7 @@ const Agent = ({
             />
             {isSpeaking && <span className="animate-speak" />}
           </div>
-          <h3>AI Interviewer</h3>
+          <h3>Entrevistador | AI</h3>
         </div>
 
         {/* User Profile Card */}
@@ -206,13 +206,13 @@ const Agent = ({
 
             <span className="relative">
               {callStatus === "INACTIVE" || callStatus === "FINISHED"
-                ? "Call"
+                ? "Chamar"
                 : ". . ."}
             </span>
           </button>
         ) : (
           <button className="btn-disconnect" onClick={() => handleDisconnect()}>
-            End
+            Encerrar
           </button>
         )}
       </div>
