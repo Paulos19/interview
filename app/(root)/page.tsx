@@ -25,19 +25,19 @@ async function Home() {
     <>
       <section className="card-cta">
         <div className="flex flex-col gap-6 max-w-lg">
-          <h2>Get Interview-Ready with AI-Powered Practice & Feedback</h2>
+          <h2>Prepare-se para Entrevistas com Prática e Feedback impulsionados por IA</h2>
           <p className="text-lg">
-            Practice real interview questions & get instant feedback
+            Pratique perguntas reais de entrevistas e receba feedback instantâneo
           </p>
 
           <Button asChild className="btn-primary max-sm:w-full">
-            <Link href="/interview">Start an Interview</Link>
+            <Link href="/interview">Iniciar uma Entrevista</Link>
           </Button>
         </div>
 
         <Image
           src="/robot.png"
-          alt="robo-dude"
+          alt="robô-inteligente"
           width={400}
           height={400}
           className="max-sm:hidden"
@@ -45,7 +45,7 @@ async function Home() {
       </section>
 
       <section className="flex flex-col gap-6 mt-8">
-        <h2>Your Interviews</h2>
+        <h2>Suas Entrevistas</h2>
 
         <div className="interviews-section">
           {hasPastInterviews ? (
@@ -61,13 +61,13 @@ async function Home() {
               />
             ))
           ) : (
-            <p>You haven&apos;t taken any interviews yet</p>
+            <p>Você ainda não realizou nenhuma entrevista</p>
           )}
         </div>
       </section>
 
       <section className="flex flex-col gap-6 mt-8">
-        <h2>Take Interviews</h2>
+        <h2>Realizar Entrevistas</h2>
 
         <div className="interviews-section">
           {hasUpcomingInterviews ? (
@@ -83,7 +83,7 @@ async function Home() {
               />
             ))
           ) : (
-            <p>There are no interviews available</p>
+            <p>Não há entrevistas disponíveis no momento</p>
           )}
         </div>
       </section>
